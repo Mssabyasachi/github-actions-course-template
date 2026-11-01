@@ -8,8 +8,8 @@
     "src": "src"
   },
   "scripts": {
-    "build": "npx webpack --config ./src/webpack.config.js --mode production",
-    "dev": "npx webpack --config ./src/webpack.config.js --mode development --watch",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider npx webpack --config ./src/webpack.config.js --mode production",
+    "dev": "NODE_OPTIONS=--openssl-legacy-provider npx webpack --config ./src/webpack.config.js --mode development --watch",
     "test": "npx standard && npx jest"
   },
   "author": "githubtraining",
@@ -25,6 +25,7 @@
     "@babel/preset-env": "^7.2.3",
     "@babel/register": "^7.0.0",
     "babel-jest": "^24.9.0",
+    "jest": "^24.9.0",
     "babel-loader": "^8.0.5",
     "html-webpack-plugin": "^3.2.0",
     "script-ext-html-webpack-plugin": "^2.1.3",
